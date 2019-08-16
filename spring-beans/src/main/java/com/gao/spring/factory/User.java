@@ -1,7 +1,5 @@
 package com.gao.spring.factory;
 
-import com.gao.spring.helloworld.Car;
-
 import java.util.List;
 
 public class User {
