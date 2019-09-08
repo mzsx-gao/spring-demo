@@ -30,6 +30,6 @@
         class:指向FactoryBean的全类名
         property:配置FactoryBean的属性
      -->
-    <bean id="user" class="com.gao.spring.factory.UserBean"></bean>
+    <bean id="user" name="myUser" class="com.gao.spring.factory.UserBean"></bean>
 
 </beans>
