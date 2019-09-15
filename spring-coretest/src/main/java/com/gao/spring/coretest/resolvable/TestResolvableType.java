@@ -1,4 +1,4 @@
-package com.gao.spring.coretest.resolvableTest;
+package com.gao.spring.coretest.resolvable;
 
 import org.junit.Test;
 import org.springframework.core.ResolvableType;
@@ -8,6 +8,7 @@ import java.lang.reflect.Type;
 
 /**
  * 名称: TestResolvableType.java
+ *
  * 描述:ResolvableType为所有的java类型提供了统一的数据结构以及API，换句话说，一个ResolvableType对象就对应着一种java类型
  * ResolvableType封装了Java的Type，提供了getSuperType()方法访问父类型，getInterfaces()反回实现的接口，getGeneric()获取泛型参数，resolve()转化为Class对象
  *
@@ -94,7 +95,7 @@ public class TestResolvableType {
 
     @Test
     public void test08() {
-        // Spring的提供工具类,用于字段的泛型信息,List<List<String>>
+        // Spring的提供工具类,用于字段的泛型信息,Map<String, Long>
         ResolvableType resolvableType = ResolvableType.forField(ReflectionUtils.findField(GenericClass.class, "maps"));
         System.out.println(resolvableType);
         // 然后通过如下API得到Person<String>的第0个位置上的泛型实参类型，即String

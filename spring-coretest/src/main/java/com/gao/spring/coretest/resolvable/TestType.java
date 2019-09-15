@@ -1,4 +1,4 @@
-package com.gao.spring.coretest.resolvableTest;
+package com.gao.spring.coretest.resolvable;
 
 import java.lang.reflect.*;
 import java.util.List;
@@ -17,7 +17,7 @@ import java.util.List;
  */
 public class TestType<T> {
 
-	public T[] a;	//组件类型为类型变量的数据-GenericArrayType
+	public T[] a;	//组件类型为类型变量的数组-GenericArrayType
 
 	public List<?>[] b;	//组件类型为参数化类型的数组-GenericArrayType
 
@@ -33,7 +33,7 @@ public class TestType<T> {
 
 	public static void typeDemoTest(String fieldName) throws Exception{
 		Field field = TestType.class.getDeclaredField(fieldName);
-		Type type = field.getGenericType();
+        Type type = field.getGenericType();
 		if(type instanceof ParameterizedType){
 			ParameterizedType parameterizedType = (ParameterizedType)type;
 			Type[] actualTypeArguments = parameterizedType.getActualTypeArguments();

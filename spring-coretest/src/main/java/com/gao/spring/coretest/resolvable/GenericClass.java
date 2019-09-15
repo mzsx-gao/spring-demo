@@ -1,4 +1,4 @@
-package com.gao.spring.coretest.resolvableTest;
+package com.gao.spring.coretest.resolvable;
 
 /**
  * 名称: GenericClass.java
