@@ -26,8 +26,8 @@
         </pluginManagement>
     </build>
     <modules>
-        <module>spring-beans</module>
-        <module>spring-aop</module>
+        <module>spring-beansdemo</module>
+        <module>spring-aopdemo</module>
         <module>spring-jdbc</module>
         <module>spring-mvc</module>
         <module>spring-coretest</module>
