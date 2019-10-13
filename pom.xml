@@ -28,7 +28,7 @@
     <modules>
         <module>spring-beansdemo</module>
         <module>spring-aopdemo</module>
-        <module>spring-jdbc</module>
+        <module>spring-jdbcdemo</module>
         <module>spring-mvc</module>
         <module>spring-coretest</module>
     </modules>

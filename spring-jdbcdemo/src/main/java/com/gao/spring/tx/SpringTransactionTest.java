@@ -1,13 +1,9 @@
-package com.gao.spring.tx.xml;
+package com.gao.spring.tx;
 
 import java.util.Arrays;
-
-import com.gao.spring.tx.xml.service.BookShopService;
-import com.gao.spring.tx.xml.service.Cashier;
 import org.junit.Test;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
-
 
 public class SpringTransactionTest {
 
@@ -17,7 +13,7 @@ public class SpringTransactionTest {
 	private Cashier cashier = null;
 	
 	{
-		ctx = new ClassPathXmlApplicationContext("spring-xml-tx.xml");
+		ctx = new ClassPathXmlApplicationContext("spring-tx-annotation.xml");
 		bookShopDao = ctx.getBean(BookShopDao.class);
 		bookShopService = ctx.getBean(BookShopService.class);
 		cashier = ctx.getBean(Cashier.class);
@@ -33,4 +29,19 @@ public class SpringTransactionTest {
 		bookShopService.purchase("AA", "1001");
 	}
 	
+	@Test
+	public void testBookShopDaoUpdateUserAccount(){
+		bookShopDao.updateUserAccount("AA", 200);
+	}
+	
+	@Test
+	public void testBookShopDaoUpdateBookStock(){
+		bookShopDao.updateBookStock("1001");
+	}
+	
+	@Test
+	public void testBookShopDaoFindPriceByIsbn() {
+		System.out.println(bookShopDao.findBookPriceByIsbn("1001"));
+	}
+
 }

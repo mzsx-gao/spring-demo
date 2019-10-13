@@ -9,8 +9,6 @@
 		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.0.xsd
 		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.0.xsd">
 	
-	<context:component-scan base-package="com.gao.spring"/>
-	
 	<!-- 导入资源文件 -->
 	<context:property-placeholder location="classpath:jdbc.properties"/>
 	
@@ -58,8 +56,8 @@
 	
 	<!-- 3. 配置事务切入点, 以及把事务切入点和事务属性关联起来 -->
 	<aop:config>
-		<aop:pointcut expression="execution(* com.gao.spring.tx.xml.service.*.*(..))" id="txPointCut"/>
-		<aop:advisor advice-ref="txAdvice" pointcut-ref="txPointCut"/>	
+		<aop:pointcut  id="txPointCut" expression="execution(* com.gao.spring.tx.xml.service.*.*(..))"/>
+		<aop:advisor advice-ref="txAdvice" pointcut-ref="txPointCut"/>
 	</aop:config>
 	
 </beans>

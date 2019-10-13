@@ -1,8 +1,8 @@
 package com.gao.spring.tx.xml.service.impl;
 
-
 import com.gao.spring.tx.xml.BookShopDao;
 import com.gao.spring.tx.xml.service.BookShopService;
+
 
 public class BookShopServiceImpl implements BookShopService {
 
@@ -14,10 +14,6 @@ public class BookShopServiceImpl implements BookShopService {
 
     @Override
     public void purchase(String username, String isbn) {
-
-        try {
-            Thread.sleep(1000);
-        } catch (InterruptedException e) {}
 
         //1. 获取书的单价
         int price = bookShopDao.findBookPriceByIsbn(isbn);

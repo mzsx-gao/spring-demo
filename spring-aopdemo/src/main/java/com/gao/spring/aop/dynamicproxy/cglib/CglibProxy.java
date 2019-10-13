@@ -6,18 +6,15 @@ import net.sf.cglib.proxy.MethodProxy;
 import java.lang.reflect.Method;
 
 /**
- cglib是针对类来实现代理的，原理是对指定的业务类生成一个子类，并覆盖其中业务方法实现代理,因为采用的是继承，所以不能对final修饰的类进行代理
-
- 并不要求委托类必须实现接口，底层采用asm字节码生成框架生成代理类的字节码
+ cglib是针对类来实现代理的，原理是对指定的业务类生成一个子类，并覆盖其中业务方法实现代理,因为采用的是继承，所以不能对final修饰的类进行代理；
+ 并不要求委托类必须实现接口，底层采用asm字节码生成框架生成代理类的字节码；
 
  Enhancer是CGLib的字节码增强器，可以方便的对类进行扩展，内部调用GeneratorStrategy.generate方法生成代理类的字节码:
  代理对象的生成过程由Enhancer类实现，大概步骤如下：
  1、生成代理类Class的二进制字节码；
  2、通过Class.forName加载二进制字节码，生成Class对象；
  3、通过反射机制获取实例构造，并初始化代理类对象。
-
  */
-
 public class CglibProxy implements MethodInterceptor {
 
     private Enhancer enhancer = new Enhancer();

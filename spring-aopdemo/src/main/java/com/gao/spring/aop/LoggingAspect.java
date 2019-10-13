@@ -8,9 +8,9 @@ import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Component;
 
 
-/*
-要在Spring 中声明 AspectJ 切面, 只需要在 IOC 容器中将切面声明为 Bean 实例. 当
-在 Spring IOC 容器中初始化AspectJ 切面之后, Spring IOC容器就会为那些与AspectJ切面相匹配的Bean创建代理
+/**
+ * 要在Spring 中声明 AspectJ 切面, 只需要在 IOC 容器中将切面声明为 Bean 实例. 当
+ * 在 Spring IOC 容器中初始化AspectJ 切面之后, Spring IOC容器就会为那些与AspectJ切面相匹配的Bean创建代理
  */
 @Order(2)
 @Aspect

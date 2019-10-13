@@ -114,7 +114,7 @@ public class JDBCTest {
     public void testQueryForObject(){
         String sql = "SELECT id, last_name lastName, email, dept_id as \"department.id\" FROM employees WHERE id = ?";
         RowMapper<Employee> rowMapper = new BeanPropertyRowMapper<>(Employee.class);
-        Employee employee = jdbcTemplate.queryForObject(sql, rowMapper, 1);
+        Employee employee = jdbcTemplate.queryForObject(sql, rowMapper, 11);
 
         System.out.println(employee);
     }
@@ -126,8 +126,7 @@ public class JDBCTest {
      */
     @Test
     public void testNamedParameterJdbcTemplate2(){
-        String sql = "INSERT INTO employees(last_name, email, dept_id) "
-                + "VALUES(:lastName,:email,:dpetId)";
+        String sql = "INSERT INTO employees(last_name, email, dept_id) VALUES(:lastName,:email,:dpetId)";
 
         Employee employee = new Employee();
         employee.setLastName("XYZ");
@@ -162,7 +161,7 @@ public class JDBCTest {
 
     @Test
     public void testEmployeeDao(){
-        System.out.println(employeeDao.get(1));
+        System.out.println(employeeDao.get(11));
     }
 
 }
