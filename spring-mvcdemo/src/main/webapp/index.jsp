@@ -18,7 +18,7 @@
 <br><br>
 
 
-==============测试modelAttribute
+==============测试modelAttribute================
 <!--
     模拟修改操作
     1. 原始数据为: 1, Tom, 123456,tom@atguigu.com,12
@@ -26,17 +26,11 @@
     3. 表单回显, 模拟操作直接在表单填写对应的属性值
 -->
 <form action="modelAttributeTest/testModelAttribute" method="Post">
-
     <input type="hidden" name="id" value="1"/>
-
     username: <input type="text" name="username" value="Tom"/><br>
-
     email: <input type="text" name="email" value="tom@atguigu.com"/><br>
-
     age: <input type="text" name="age" value="13"/><br>
-
     <input type="submit" value="Submit"/>
-
 </form>
 
 <br><br>

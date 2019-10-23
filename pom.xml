@@ -29,7 +29,7 @@
         <module>spring-beansdemo</module>
         <module>spring-aopdemo</module>
         <module>spring-jdbcdemo</module>
-        <module>spring-mvc</module>
+        <module>spring-mvcdemo</module>
         <module>spring-coretest</module>
     </modules>
 </project>

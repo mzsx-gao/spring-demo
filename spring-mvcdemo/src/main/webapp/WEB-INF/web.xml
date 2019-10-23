@@ -4,11 +4,6 @@
          xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
          id="WebApp_ID" version="2.5">
 
-    <!--<context-param>
-        <param-name>contextConfigLocation</param-name>
-        <param-value>classpath:spring-mvc.aop_xml</param-value>
-    </context-param>-->
-
     <!--
     配置 org.springframework.web.filter.HiddenHttpMethodFilter: 可以把 POST 请求转为 DELETE 或 POST 请求
     -->
@@ -42,10 +37,5 @@
         <servlet-name>dispatcherServlet</servlet-name>
         <url-pattern>/</url-pattern>
     </servlet-mapping>
-
-    <!--<listener>
-        <description>spring监听器</description>
-        <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
-    </listener>-->
 
 </web-app>

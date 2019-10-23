@@ -10,7 +10,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>spring-mvc</artifactId>
+    <artifactId>spring-mvcdemo</artifactId>
     <packaging>war</packaging>
 
 
@@ -47,14 +47,12 @@
 
     <build>
         <finalName>spring-mvc</finalName>
-        <pluginManagement>
-            <plugins>
-                <plugin>
-                    <groupId>org.eclipse.jetty</groupId>
-                    <artifactId>jetty-maven-plugin</artifactId>
-                    <version>9.4.11.v20180605</version>
-                </plugin>
-            </plugins>
-        </pluginManagement>
+        <plugins>
+            <plugin>
+                <groupId>org.eclipse.jetty</groupId>
+                <artifactId>jetty-maven-plugin</artifactId>
+                <version>9.4.11.v20180605</version>
+            </plugin>
+        </plugins>
     </build>
 </project>

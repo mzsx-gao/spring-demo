@@ -21,6 +21,11 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.SessionAttributes;
 import org.springframework.web.servlet.ModelAndView;
 
+/*
+  @SessionAttributes 除了可以通过属性名指定需要放到会话中的属性外(实际上使用的是 value 属性值),
+  还可以通过模型属性的对象类型指定哪些模型属性需要放到会话中(实际上使用的是 types 属性值)
+  注意: 该注解只能放在类的上面. 而不能修饰放方法.
+ */
 
 //@SessionAttributes(value={"user"}, types={String.class})
 @RequestMapping("/springmvc")
@@ -47,11 +52,7 @@ public class SpringMVCTest {
 		return SUCCESS;
 	}
 
-	/*
-	  @SessionAttributes 除了可以通过属性名指定需要放到会话中的属性外(实际上使用的是 value 属性值),
-	  还可以通过模型属性的对象类型指定哪些模型属性需要放到会话中(实际上使用的是 types 属性值)
-	  注意: 该注解只能放在类的上面. 而不能修饰放方法.
-	 */
+
 	@RequestMapping("/testSessionAttributes")
 	public String testSessionAttributes(Map<String, Object> map){
 		User user = new User("Tom", "123456", "tom@atguigu.com", 15);
@@ -73,8 +74,7 @@ public class SpringMVCTest {
 	}
 
 	/**
-	 * 目标方法的返回值可以是 ModelAndView 类型。
-	 * 其中可以包含视图和模型信息
+	 * 目标方法的返回值可以是 ModelAndView 类型，其中可以包含视图和模型信息
 	 * SpringMVC 会把 ModelAndView 的 model 中数据放入到 request 域对象中.
 	 * @return
 	 */
@@ -99,7 +99,6 @@ public class SpringMVCTest {
 	  OutputStream
 	  Reader
 	  Writer
-	  @throws IOException
 	 */
 	@RequestMapping("/testServletAPI")
 	public void testServletAPI(HttpServletRequest request,
@@ -134,8 +133,7 @@ public class SpringMVCTest {
 	 * 了解: 映射请求头信息 用法同 @RequestParam
 	 */
 	@RequestMapping("/testRequestHeader")
-	public String testRequestHeader(
-			@RequestHeader(value = "Accept-Language") String al) {
+	public String testRequestHeader(@RequestHeader(value = "Accept-Language") String al) {
 		System.out.println("testRequestHeader, Accept-Language: " + al);
 		return SUCCESS;
 	}
@@ -148,8 +146,7 @@ public class SpringMVCTest {
 	public String testRequestParam(
 			@RequestParam(value = "username") String un,
 			@RequestParam(value = "age", required = false, defaultValue = "0") int age) {
-		System.out.println("testRequestParam, username: " + un + ", age: "
-				+ age);
+		System.out.println("testRequestParam, username: " + un + ", age: " + age);
 		return SUCCESS;
 	}
 
