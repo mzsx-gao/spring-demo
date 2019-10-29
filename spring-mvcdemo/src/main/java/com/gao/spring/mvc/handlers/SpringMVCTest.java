@@ -22,12 +22,12 @@ import org.springframework.web.bind.annotation.SessionAttributes;
 import org.springframework.web.servlet.ModelAndView;
 
 /*
-  @SessionAttributes 除了可以通过属性名指定需要放到会话中的属性外(实际上使用的是 value 属性值),
-  还可以通过模型属性的对象类型指定哪些模型属性需要放到会话中(实际上使用的是 types 属性值)
+  @SessionAttributes，指定将哪些属性放入到session作用域中
+  1.通过属性名指定需要放到会话中的属性外(实际上使用的是 value 属性值),
+  2.通过模型属性的对象类型指定哪些模型属性需要放到会话中(实际上使用的是 types 属性值)
   注意: 该注解只能放在类的上面. 而不能修饰放方法.
  */
-
-//@SessionAttributes(value={"user"}, types={String.class})
+@SessionAttributes(value={"user"}, types={String.class})
 @RequestMapping("/springmvc")
 @Controller
 public class SpringMVCTest {
@@ -53,6 +53,11 @@ public class SpringMVCTest {
 	}
 
 
+    /**
+     * 测试@SessionAttributes的用法
+     * @param map
+     * @return
+     */
 	@RequestMapping("/testSessionAttributes")
 	public String testSessionAttributes(Map<String, Object> map){
 		User user = new User("Tom", "123456", "tom@atguigu.com", 15);
