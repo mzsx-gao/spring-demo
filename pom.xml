@@ -32,5 +32,6 @@
         <module>spring-mvcdemo</module>
         <module>spring-coretest</module>
         <module>springmvc-anno</module>
+        <module>my-servlet3</module>
     </modules>
 </project>
