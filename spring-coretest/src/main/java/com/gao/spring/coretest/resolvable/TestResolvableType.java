@@ -10,7 +10,8 @@ import java.lang.reflect.Type;
  * 名称: TestResolvableType.java
  *
  * 描述:ResolvableType为所有的java类型提供了统一的数据结构以及API，换句话说，一个ResolvableType对象就对应着一种java类型
- * ResolvableType封装了Java的Type，提供了getSuperType()方法访问父类型，getInterfaces()反回实现的接口，getGeneric()获取泛型参数，resolve()转化为Class对象
+ * ResolvableType封装了Java的Type，提供了getSuperType()方法访问父类型，getInterfaces()反回实现的接口，getGeneric()获取泛型参数，
+ * resolve()转化为Class对象
  *
  * ResolvableType的构造函数都是私有的，提供了四类实例化对象的静态方法:
  *
