@@ -37,7 +37,5 @@ public class MyServletContainerInitializer implements ServletContainerInitialize
 		javax.servlet.FilterRegistration.Dynamic filter = arg1.addFilter("orderFilter", OrderFilter.class);
 		//添加filer的映射信息，可以指定专门来拦截哪个servlet
 		filter.addMappingForUrlPatterns(EnumSet.of(DispatcherType.REQUEST), true, "/*");
-		
 	}
-
 }
