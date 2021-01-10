@@ -7,7 +7,7 @@ public class CglibProxyTest {
 
     public static void main(String[] args) {
         UserService userService = (UserService) CglibBeanFactory.getInstance();
-        System.out.println(userService.myMethod("Jack"));
+        System.out.println(userService.doSomething0("Jack"));
     }
 
 }
