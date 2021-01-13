@@ -1,6 +1,6 @@
 package com.gao.spring.aop.helloWorld;
 
-import com.gao.spring.aop.ArithmeticCalculator;
+import com.gao.spring.aop.aop_xml_anno.ArithmeticCalculator;
 
 public class ArithmeticCalculatorLoggingImpl implements ArithmeticCalculator {
 

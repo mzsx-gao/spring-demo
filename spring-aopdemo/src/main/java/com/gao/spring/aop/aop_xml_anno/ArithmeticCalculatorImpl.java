@@ -1,4 +1,4 @@
-package com.gao.spring.aop;
+package com.gao.spring.aop.aop_xml_anno;
 
 import org.springframework.stereotype.Component;
 

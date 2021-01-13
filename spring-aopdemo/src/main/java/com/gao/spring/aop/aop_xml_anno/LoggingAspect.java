@@ -1,12 +1,11 @@
-package com.gao.spring.aop;
+package com.gao.spring.aop.aop_xml_anno;
 
+import java.util.Arrays;
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.*;
 import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Component;
-
-import java.util.Arrays;
 
 
 /**
@@ -23,7 +22,7 @@ public class LoggingAspect {
 	 * 使用 @Pointcut 来声明切入点表达式.
 	 * 后面的其他通知直接使用方法名来引用当前的切入点表达式.
 	 */
-	@Pointcut("execution(public int com.gao.spring.aop.ArithmeticCalculator.*(..))")
+	@Pointcut("execution(public int com.gao.spring.aop.aop_xml_anno.ArithmeticCalculator.*(..))")
 	public void declareJointPointExpression(){}
 
 	//在 com.atguigu.spring.aop.ArithmeticCalculator 接口的每一个实现类的每一个方法开始之前执行一段代码
