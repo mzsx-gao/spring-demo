@@ -1,4 +1,4 @@
-package com.gao.spring.aop;
+package com.gao.spring.aop.aop_autoconfig;
 
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.annotation.Aspect;
@@ -15,7 +15,7 @@ import java.util.Arrays;
 @Component
 public class VlidationAspect {
 
-	@Before("com.gao.spring.aop.LoggingAspect.declareJointPointExpression()")
+	@Before("com.gao.spring.aop.aop_autoconfig.LoggingAspect.declareJointPointExpression()")
 	public void validateArgs(JoinPoint joinPoint){
 		System.out.println("-->validate:" + Arrays.asList(joinPoint.getArgs()));
 	}

@@ -1,4 +1,4 @@
-package com.gao.spring.aop;
+package com.gao.spring.aop.aop_autoconfig;
 
 import org.junit.Test;
 import org.springframework.context.ApplicationContext;
