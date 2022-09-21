@@ -104,9 +104,9 @@ public class TestResolvableType {
         System.out.println(resolve);
     }
 
+    // Spring的提供工具类,用于方法的返回值的泛型信息,Map<String, Long>
     @Test
     public void test09() {
-        // Spring的提供工具类,用于方法的返回值的泛型信息,Map<String, Long>
         ResolvableType resolvableType = ResolvableType.forMethodReturnType(ReflectionUtils.findMethod(GenericClass.class, "getMaps"));
         Class<?> resolve = resolvableType.getGeneric(1).resolve();
         System.out.println(resolve);

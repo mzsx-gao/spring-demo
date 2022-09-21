@@ -29,9 +29,10 @@
         <module>spring-beansdemo</module>
         <module>spring-aopdemo</module>
         <module>spring-jdbcdemo</module>
-        <module>spring-mvcdemo</module>
         <module>spring-coretest</module>
-        <module>springmvc-anno</module>
-        <module>my-servlet3</module>
+
+        <module>spring-mvc/springmvc-xml</module>
+        <module>spring-mvc/springmvc-anno</module>
+        <module>spring-mvc/my-servlet3</module>
     </modules>
 </project>

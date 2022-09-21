@@ -37,9 +37,9 @@
         </dependency>
 
         <!--<dependency>-->
-            <!--<groupId>cglib</groupId>-->
-            <!--<artifactId>cglib</artifactId>-->
-            <!--<version>${cglib.version}</version>-->
+            <!--<groupId>cglib_demo1</groupId>-->
+            <!--<artifactId>cglib_demo1</artifactId>-->
+            <!--<version>${cglib_demo1.version}</version>-->
         <!--</dependency>-->
         <!--<dependency>-->
             <!--<groupId>org.aspectj</groupId>-->
